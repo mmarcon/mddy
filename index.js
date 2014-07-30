@@ -4,6 +4,7 @@ var express = require('express'),
     highlight = require('highlight.js'),
     fs = require('fs'),
     path = require('path'),
+    findit = require('findit'),
     config = require('./config.json');
 
 var markedRenderer = new marked.Renderer();
@@ -52,22 +53,22 @@ app.get('/', function(req, res){
         notes: []
     };
 
-    fs.readdir(__dirname + '/notes', function(err, files) {
-        if(!err) {
-            console.log(files);
-            index.notes = files.map(function(f){
-                return {
-                    name: f,
-                    url: '/' + f
-                };
-            });
-        }
+    var notesPath = path.join(__dirname, 'notes');
+
+    var finder = findit(notesPath);
+    finder.on('file', function(file, stat){
+        index.notes.push({
+            name: path.relative(notesPath, file),
+            url: '/' + path.relative(notesPath, file)
+        });
+    });
+    finder.on('end', function(){
         res.render('index', index);
-    })
+    });
 });
 
-app.get('/:file', function(req, res){
-    var fileName = req.params.file,
+app.get('/*', function(req, res){
+    var fileName = req.params[0],
         filePath = path.join(__dirname, 'notes', fileName);
 
     fs.readFile(filePath, {encoding: 'utf-8'}, function(err, data){

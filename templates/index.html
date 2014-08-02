@@ -1,12 +1,19 @@
 <% include header.html %>
-<h1>Your Notes</h1>
 
-<ul class="list-unstyled">
+<dl>
     <% notes.forEach(function(note){ %>
 
-    <li>
+    <dt>
         <a href="<%= note.url %>"><%= note.title %></a>
         <a href="<%= note.url %>/present"><span class="glyphicon glyphicon-new-window"></span></a>
-    </li><% }) %>
-</ul>
+    </dt>
+    <dd>
+        <strong>Tags:</strong>
+        <% note.tags.forEach(function(tag){ %>
+        <span class="label label-primary"><%= tag %></span>
+        <% }) %><br>
+        <strong>Path:</strong> <%= note.path %>
+    </dd>
+    <% }) %>
+</dl>
 <% include footer.html %>

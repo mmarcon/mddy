@@ -1,3 +1,17 @@
+@import '../highlight/solarized_dark';
+
 body {
-    padding-top: 50px;
+    padding-top: 80px;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+
+.image-wrapper {
+    text-align: center;
+
+    img {
+        max-width: 100%;
+    }
 }

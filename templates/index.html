@@ -1,11 +1,12 @@
 <% include header.html %>
-<h1><%= app %></h1>
+<h1>Your Notes</h1>
 
-<ul>
+<ul class="list-unstyled">
     <% notes.forEach(function(note){ %>
 
     <li>
-        <a href="<%= note.url %>"><%= note.name %></a>
+        <a href="<%= note.url %>"><%= note.title %></a>
+        <a href="<%= note.url %>/present"><span class="glyphicon glyphicon-new-window"></span></a>
     </li><% }) %>
 </ul>
 <% include footer.html %>

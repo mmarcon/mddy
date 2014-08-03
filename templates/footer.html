@@ -1,5 +1,17 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+    $(function(){
+        var presentation = $('.presentation'),
+            w = $(window);
+
+        presentation.find('p, h1, h2, h3, h4, h5, h6, ol, ul, dl').css({
+            'min-height': w.height()
+        }).each(function(i){
+            $(this).attr('id', 'slide-' + i).addClass('slide');
+        });
+    });
+    </script>
 </body>
 </html>

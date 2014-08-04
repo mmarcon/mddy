@@ -14,7 +14,7 @@ app.set('views', root + '/templates');
 app.set('view engine', 'html');
 
 app.get('/', controller.main(config, root));
-app.get('/*/presentation', controller.note(config, root, true));
-app.get('/*', controller.note(config, root));
+app.get('/presentation/*', controller.note(config, root, true));
+app.get('/note/*', controller.note(config, root));
 
 app.listen(process.env.PORT || process.env.VCAP_APP_PORT || 3000);

@@ -4,8 +4,8 @@
     <% notes.forEach(function(note){ %>
 
     <dt>
-        <a href="<%= note.url %>"><%= note.title %></a>
-        <a href="<%= note.url %>/presentation"><span class="glyphicon glyphicon-play-circle"></span></a>
+        <a href="/note<%= note.url %>"><%= note.title %></a>
+        <a href="/presentation<%= note.url %>"><span class="glyphicon glyphicon-play-circle"></span></a>
     </dt>
     <dd>
         <strong>Tags:</strong>

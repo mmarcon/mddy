@@ -10,9 +10,12 @@
     <dd>
         <strong>Tags:</strong>
         <% note.tags.forEach(function(tag){ %>
-        <span class="label label-primary"><%= tag %></span>
-        <% }) %><br>
-        <strong>Path:</strong> <%= note.path %>
+            <span class="label label-primary"><%= tag.toLowerCase() %></span>
+        <% }) %>
+        <% if(note.actions > 0) { %>
+            <span class="label label-warning">action items</span>
+        <% } %><br>
+        <strong>Path:</strong> <%= note.path %><br>
     </dd>
     <% }) %>
 </dl>

@@ -1,5 +1,4 @@
 var express = require('express'),
-    marked = require('marked'),
     middleware = require('./lib/middleware'),
     config = require('./config.json'),
     controller = require('./lib/controller');

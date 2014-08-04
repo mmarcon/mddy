@@ -6,10 +6,39 @@
         var presentation = $('.presentation'),
             w = $(window);
 
+        function nextSlide() {
+            var closestToTop,
+                reference = $('body').scrollTop(),
+                distance = 0,
+                next;
+
+            $('.slide').each(function(){
+                var $this = $(this),
+                    newDistance = Math.abs(reference - $this.offset().top);
+                if(!closestToTop ||  newDistance < distance) {
+                    distance = newDistance;
+                    closestToTop = $this;
+                }
+            });
+            next = closestToTop.next();
+            if(next.length > 0) {
+                $('html, body').animate({
+                    scrollTop: next.offset().top
+                });
+            }
+        }
+
         presentation.find('p, h1, h2, h3, h4, h5, h6, ol, ul, dl').css({
             'min-height': w.height()
         }).each(function(i){
             $(this).attr('id', 'slide-' + i).addClass('slide');
+        });
+
+        $(document).keypress(function(event) {
+            event.preventDefault();
+            if (event.which === 32) {
+                nextSlide();
+            }
         });
     });
     </script>

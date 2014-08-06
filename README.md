@@ -19,11 +19,16 @@ The idea is that you write all your notes in the `notes` folder with your favori
  * View notes in presentation mode
  * Title and Tags via [YAML frontmatter syntax](http://jekyllrb.com/docs/frontmatter/)
  * Action items in notes. Just write `@action:` anywhere where you have an action item, MDDY will do the rest.
+ * Run `mddy` from any notes folder in your filesystem with the convenient CLI tool.
 
 ## Use MDDY
 
 You'll need [Node.js](http://nodejs.org/).
 
-Since it is at a very early stage, in order to run MDDY you'll have to clone the repo, run `npm install`, create a `notes` directory and start writing your notes in Markdown inside it (or any subfolder).
+    ⚡➜ npm install -g http://github.com/mmarcon/mddy/tarball/master
 
-The plan is to have soon command line tools that will automate all the manual work.
+Then cd into your notes folder and just run
+
+    ⚡➜ mddy
+
+Open your browser and point it to [http://localhost:3000](http://localhost:3000) and you are good to go.

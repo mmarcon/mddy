@@ -7,6 +7,9 @@ var paths = {
         'lib/**/*.js',
         'index.js',
         'bin/**/*.js'
+    ],
+    sass: [
+        'static/scss/**/*.scss'
     ]
 };
 
@@ -22,4 +25,10 @@ gulp.task('hint', function() {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('watch', function() {
+  gulp.watch(paths.sass, ['sass']);
+});
+
 gulp.task('build', ['hint', 'sass']);
+
+gulp.task('default', ['build']);

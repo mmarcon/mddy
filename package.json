@@ -19,5 +19,14 @@
     "front-matter": "0.2.0",
     "q": "1.0.1"
   },
-  "bin": { "mddy": "./bin/mddy.js" }
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-jshint": "^1.5.3",
+    "jshint-stylish": "^0.1.5",
+    "gulp-nodemon": "^1.0.2",
+    "gulp-sass": "^0.7.2"
+  },
+  "bin": {
+    "mddy": "./bin/mddy.js"
+  }
 }

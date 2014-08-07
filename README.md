@@ -4,7 +4,7 @@ Write your notes in Markdown, Mddy does the rest.
 
 ## What is it
 
-I like Evernote a lot. Unfortunately it has some drawbacks. The best fetures are only for premium accounts, and I don't wanna buy one. You can't write notes in Markdown, and that sucks because Markdown is the best way to write notes.
+I like Evernote a lot. Unfortunately it has some drawbacks. The best features are only for premium accounts, and I don't wanna buy one. You can't write notes in Markdown, and that sucks because Markdown is the best way to write notes.
 
 For these reasone, I decided to make MDDY. MDDY borrows some features I like from Evernote (tags, presentation mode, clean and simple UI) but at the same time it supports Markdown. Additional benefit: it is open source.
 

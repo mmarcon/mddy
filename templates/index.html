@@ -14,6 +14,8 @@
         <% }) %>
         <% if(note.actions > 0) { %>
             <span class="label label-danger">action items</span>
+        <% } else if(note.done > 0) { %>
+            <span class="label label-success">all done</span>
         <% } %><br>
         <strong>Path:</strong> <%= note.path %><br>
     </dd>

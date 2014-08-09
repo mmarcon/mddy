@@ -12,14 +12,14 @@
         <% note.tags.forEach(function(tag){ %>
             <span class="label label-primary"><%= tag.toLowerCase() %></span>
         <% }) %>
-        <small>
         <% if(note.actions > 0) { %>
             <span class="label label-danger">action items</span>
         <% } else if(note.done > 0) { %>
             <span class="label label-success">all done</span>
         <% } %><br>
-        <span class="glyphicon glyphicon-file"></span> <%= note.path %><br>
-        <span class="glyphicon glyphicon-time"></span> <%= note.stat.mtime.toLocaleDateString() %> at <%= note.stat.mtime.getHours() %>:<%= note.stat.mtime.getMinutes() %><br>
+        <small>
+            <span class="glyphicon glyphicon-file"></span> <%= note.path %><br>
+            <span class="glyphicon glyphicon-time"></span> <%= note.stat.mtime.toLocaleDateString() %> at <%= note.stat.mtime.getHours() %>:<%= note.stat.mtime.getMinutes() %><br>
         </small>
     </dd>
     <% }) %>

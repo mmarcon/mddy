@@ -1,3 +1,7 @@
 {
-    "app": "MDDY"
+    "app": "MDDY",
+    "allowedExtensions": [
+        "md",
+        "markdown"
+    ]
 }

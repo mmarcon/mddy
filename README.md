@@ -14,7 +14,7 @@ The idea is that you write all your notes in the `notes` folder with your favori
 
 ## Example
 
-You can see MDDY running on Heroku: [mddy.herokuapp.com](http://mddy.herokuapp.com/). Have a look at the [heroku branch](https://github.com/mmarcon/mddy/tree/annotate) to see the setup to run MDDY and display your notes on Heroku.
+You can see MDDY running on Heroku: [mddy.herokuapp.com](http://mddy.herokuapp.com/). Have a look at the [heroku branch](https://github.com/mmarcon/mddy/tree/heroku) to see the setup to run MDDY and display your notes on Heroku.
 
 ## Currently supported features
  * Clean, [bootstrappy](http://getbootstrap.com/) UI

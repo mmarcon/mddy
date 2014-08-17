@@ -12,13 +12,18 @@ The implementation is still at a very early stage, but there is already somethin
 
 The idea is that you write all your notes in the `notes` folder with your favorite Markdown editor. Then just run MDDY and all your notes will be available in one place.
 
+## Example
+
+You can see MDDY running on Heroku: [mddy.herokuapp.com](http://mddy.herokuapp.com/). Have a look at the [heroku branch](https://github.com/mmarcon/mddy/tree/annotate) to see the setup to run MDDY and display your notes on Heroku.
+
 ## Currently supported features
  * Clean, [bootstrappy](http://getbootstrap.com/) UI
  * Recursively loads notes in `notes` folder
  * View notes
  * View notes in presentation mode
  * Title and Tags via [YAML frontmatter syntax](http://jekyllrb.com/docs/frontmatter/)
- * Action items in notes. Just write `@action:` anywhere where you have an action item, MDDY will do the rest.
+ * Action items in notes. Just write `@action:` anywhere where you have an action item, MDDY will recognize it as an action item and auto-tag the note accordingly.
+ * Done action item in notes. Just write `@done:` anywhere where you have an action item, MDDY will recognize it as a completed action item and auto-tag the note accordingly.
  * Run `mddy` from any notes folder in your filesystem with the convenient CLI tool.
 
 ## Use MDDY

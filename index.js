@@ -1,10 +1,13 @@
 var express = require('express'),
     config = require('./config.json'),
+    package = require('./package.json'),
     controller = require('./lib/controller'),
-    path = require('path');
+    path = require('path'),
+    ip = require('ip');
 
 var MDDY = function(root){
     this.root = root;
+    this.port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
 };
 
 MDDY.prototype.start = function() {
@@ -18,7 +21,11 @@ MDDY.prototype.start = function() {
     app.get('/presentation/*', controller.note(config, this.root, true));
     app.get('/note/*', controller.note(config, this.root));
 
-    app.listen(process.env.PORT || process.env.VCAP_APP_PORT || 3000);
+    console.log('MDDY version: ' + package.version);
+    console.log('Working directory: ' + this.root);
+    console.log('Running at http://' + ip.address() + ':' + this.port);
+
+    app.listen(this.port);
 };
 
 module.exports = MDDY;

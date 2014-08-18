@@ -30,10 +30,20 @@ You can see MDDY running on Heroku: [mddy.herokuapp.com](http://mddy.herokuapp.c
 
 You'll need [Node.js](http://nodejs.org/).
 
-    ⚡➜ npm install -g http://github.com/mmarcon/mddy/tarball/master
+    (max)➜ npm install -g mddy
 
 Then cd into your notes folder and just run
 
-    ⚡➜ mddy
+    (max)➜ mddy
+    MDDY version: 1.0.1
+    Working directory: /Users/mmarcon/Dropbox/notes
+    Running at http://192.168.5.105:3000
+
+Optionally you can run MDDY from anywhere and specify the path to your notes folder:
+
+    (max)➜ mddy /path/to/your/notes
+    MDDY version: 1.0.1
+    Working directory: /path/to/your/notes
+    Running at http://192.168.5.105:3000
 
 Open your browser and point it to [http://localhost:3000](http://localhost:3000) and you are good to go.
